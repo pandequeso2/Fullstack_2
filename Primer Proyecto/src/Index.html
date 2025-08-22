@@ -4,15 +4,16 @@
     <meta charset="UTF-8"> <!--Definir eñ conjunto de caracteres utilizado en el documento-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title><!--Se Agrega un titulo a nuestra pstaña-->
+    <link rel="stylesheet" href="assets/css/style.css"> <!--Esto vincula nuestro archivo html, con la configuración css-->
 </head>
 <body>
     <!--Contenedor Principal de mi Pagina-->
-    <div>
+    <div class="calculadora">
         <h1>Calculadora</h1> <!--Titulo del body-->
         <!--Contenedor de la pantalla de resultados de la pantalla-->
-        <div>0</div>
+        <div class="display">0</div>
         <!--Contenedor de los botones para la calculadora-->
-        <div>
+        <div class="button">
             <!--Botones de una calculadora-->
             <button>AC</button>
             <button>Del</button>
@@ -32,7 +33,7 @@
             <button>+</button>
             <button>.</button>
             <button>0</button>
-            <button>=</button>
+            <button class="equal">=</button>
         </div>
     </div>
     
