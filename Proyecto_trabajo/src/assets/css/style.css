@@ -1,0 +1,28 @@
+*{  /*Comentario: Reiniciar el estilo de todos los elementos para editar.*/
+    box-sizing: border-box; /*El relleno y el borde esten incluidos en el ancho y largo.*/
+    font-family: 'Franklin Gothic Medium', Arial; /*Fuente por defeto para el texto*/
+    text-align: center; /*El titulo de nuestro sitio este al medio por defecto*/
+}
+
+h1{
+    font-family: Arial;
+    font-size: 100px;
+}
+
+p{
+    font-size: 14px;
+    color: #333;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    background: rgb(5, 14, 148);
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    color: black;
+}
