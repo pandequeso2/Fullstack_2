@@ -1,0 +1,85 @@
+* { /*Reinicia el estilo de todos los elementos para evitar inconsistencias entre navegadores.*/
+    box-sizing: border-box; /*Garantiza que el relleno y el borde estén incluidos en el ancho y la altura totales del elemento.*/
+    font-family: 'Segoe UI', sans-serif; /*Fuente por defecto para el texto*/
+    text-align: center; /*Alinea el texto al centro por defecto*/
+}
+
+h1 {
+    color: rgb(16, 38, 237); /*Color del texto del título*/
+    margin-bottom: 1rem; /*Espacio debajo del título*/
+}
+
+body { /*Estilo del cuerpo de la página*/
+    margin: 0; /*Elimina el margen por defecto del cuerpo*/
+    height: 100vh; /*Altura completa de la ventana del navegador*/ /* 100vh significa que el cuerpo ocupará el 100% de la altura de la ventana del navegador */
+    display: flex; /*Utiliza flexbox para centrar el contenido*/
+    align-items: center; /*Alinea los elementos hijos verticalmente al centro*/
+    justify-content: center; /*Alinea los elementos hijos horizontalmente al centro*/
+    background: rgb(120, 221, 186); /*Color de fondo de la página*/
+}
+
+button { /*Estilo específico para los botones dentro de la clase .button*/
+    background: #f2f3f7; /*Color de fondo de los botones*/
+    border: none; /*Elimina el borde por defecto de los botones*/
+    border-radius: 50%; /*Bordes redondeados para un efecto más suave*/
+    padding: 1rem; /*Espaciado interno para los botones*/
+    font-size: 1.1rem; /*Tamaño de fuente para los botones*/
+    font-weight: bold;   /*Negrita para el texto de los botones*/
+    color: #333; /*Color del texto de los botones*/
+    box-shadow: 4px 4px 10px #ccc, -4px -4px 10px #fff; /*Sombra para dar profundidad a los botones*/
+    transition: all 0.2s, transform 0.1s; /*Transición suave para cambios de estilo y transformación*/
+    cursor: pointer; /*Cambiar el cursor a puntero al pasar sobre los botones*/
+} 
+
+button:hover { /*Efecto al pasar el cursor sobre los botones*/
+    background-color: #e0e0e0; /*Color de fondo al pasar el cursor*/
+    transform: scale(1.05);     /*Escala ligeramente el botón al pasar el cursor*/  
+}
+
+button:active { /*Efecto al hacer clic en los botones*/
+    box-shadow: inset 2px 2px 6px #bbb, inset -2px -2px 6px #fff; /*Sombra interna para dar un efecto de profundidad al hacer clic*/
+    transform: scale(0.95); /*Reduce ligeramente el tamaño del botón al hacer clic*/
+}
+
+.calculator { /*Contenedor principal de la calculadora*/
+    background: white;  /*Color de fondo de la calculadora*/
+    border-radius: 20px; /*Bordes redondeados para un efecto más suave*/ /* 20px es un valor que hace que los bordes sean más suaves y redondeados */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /*Sombra para dar profundidad*/
+    padding: 1.5rem; /*Espaciado interno para separar el contenido del borde*/ /* 1.5rem es un valor que proporciona un espaciado interno adecuado para que el contenido no esté pegado a los bordes */
+    display: flex;  /*Utiliza flexbox para organizar los elementos internos*/
+    flex-direction: column; /*Organiza los elementos en una columna*/
+    gap: 1rem; /*Espacio entre los elementos internos*/ /* 1rem es un valor que proporciona un espacio adecuado entre los elementos internos */
+    width: 90%; /*Ancho del contenedor de la calculadora*/
+    max-width: 320px; /*Ancho máximo para evitar que se expanda demasiado en pantallas grandes*/
+}
+
+.display { /*Estilo para la pantalla de la calculadora*/
+    background: #e8f3f3; /*Color de fondo de la pantalla*/
+    border-radius: 20px; /*Bordes redondeados para un efecto más suave*/ 
+    padding: 1rem; /*Espaciado interno para separar el texto del borde*/ /* 1rem es un valor que proporciona un espaciado interno adecuado para que el texto no esté pegado al borde */
+    font-size: 2rem; /*Tamaño de fuente grande para una mejor visibilidad*/ /* 2rem es un valor grande que hace que el texto sea fácilmente legible en la pantalla */
+    text-align: right; /*Alinea el texto a la derecha para simular una pantalla de calculadora*/
+    color: #333;    /*Color del texto de la pantalla*/
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /*Sombra interna para dar un efecto de profundidad*/ /* inset 0 2px 5px rgba(0, 0, 0, 0.1) significa que la sombra se aplica dentro del elemento, creando un efecto de profundidad */
+    transition: all 0.2s; /*Transición suave para cambios de estilo*/
+}
+
+.buttons { /*Estilo para los botones de la calculadora*/
+    display: grid; /*Utiliza un grid para organizar los botones*/
+    grid-template-columns: repeat(4, 1fr); /*Crea una cuadrícula con 4 columnas de igual tamaño*/ /* repeat(4, 1fr) significa que se crearán 4 columnas, cada una ocupando una fracción igual del espacio disponible */
+    gap: 0.7rem; /*Espacio entre los botones*/ /* 1rem es un valor que proporciona un espacio adecuado entre los botones */
+}
+
+.equal { /*Estilo específico para el botón de igual*/
+    grid-column: span 2; /*Hace que el botón ocupe dos columnas en el grid*/
+    border-radius: 30px; /*Bordes redondeados para un efecto más suave*/
+    background: rgb(120, 221, 186); /*Color de fondo del botón de igual*/
+    color: white; /*Color del texto del botón de igual*/
+}
+
+@media (max-width: 400px) { /*Estilos responsivos para pantallas pequeñas*/ /*max-width: 400px indica que estos estilos se aplicarán a pantallas con un ancho máximo de 400px*/
+    button { /*Estilo de los botones en pantallas pequeñas*/
+        padding: 0.8rem; /*Reduce el espaciado interno de los botones*/ /* 0.8rem es un valor más pequeño que 1rem, lo que hace que los botones sean más compactos en pantallas pequeñas */
+        font-size: 1rem; /*Reduce el tamaño de fuente de los botones*/ /* 1rem es un valor más pequeño que 1.1rem, lo que hace que el texto de los botones sea más pequeño en pantallas pequeñas */
+    }
+}
