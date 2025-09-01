@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!--Indicar que es un documento html-->
+<html lang="es">
+    <head> <!--Encabezado-->
+        <meta charset="UTF-8"> <!--Define el conjunto de caracteres utilizados en el documentos-->
+        <title>Cálculadora</title> <!--Agregamos el título a la pestaña del navegador-->
+        <link rel="icon" href="assets/logo.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="CSS/style.css"> <!--Unir al archivo css externo-->
+    </head>
+    <body>
+        <!--Contenedor principal-->
+        <div class="calculadora">
+            <h1>Cálculadora</h1>
+            <img src="assets/logo.jpg" width="100px" />
+            <!--Contenedor para la pantalla de la cálculadora-->
+            <div id="display" class="display">0</div>
+            <!--Contenedor para los botones de la cálculadora-->
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="append('%')">%</button>
+                <button onclick="append('/')">/</button>
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button onclick="append('*')">*</button>
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button onclick="append('-')">-</button>
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button onclick="append('+')">+</button>
+                <button onclick="append('.')">.</button>
+                <button onclick="append('0')">0</button>
+                <button onclick="calculate()" class="igual">=</button>
+            </div>
+        </div>
+        <audio id="click-sound" src="assets/audio/click.mp3" preload="auto"></audio>
+        <script src="assets/js/funciones.js"></script>
+    </body>
+</html>
